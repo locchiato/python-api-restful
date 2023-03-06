@@ -1,0 +1,37 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row mt-4">
+          <div class="mt-5 mb-4">
+            <h1>Detalles del profesor.</h1>
+          </div>
+          <a href="{% url 'professors:create' %}" class="btn btn-primary mt-2 mb-4">Crear profesores</a>
+
+            <table class="table mt-4">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Fecha de creación</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>{{  professor.name  }}</td>
+                            <td>{{  professor.created_date  }}</td>
+                            <td>
+                              <a href="{% url 'professors:update' professor.pk %}" class="btn btn-warning">Editar</a>
+                              <a href="{% url 'professors:delete' professor.pk %}" class="btn btn-danger">Eliminar</a>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+
+    
+
+{% endblock %}

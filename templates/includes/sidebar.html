@@ -1,0 +1,47 @@
+ {% load static %}
+ 
+ <div class="sidebar" data-color="purple" data-background-color="white" data-image="/static/assets/img/sidebar-1.jpg">
+      <div class="logo">
+        <a target="_blank" rel="noopener noreferrer" 
+           href="/" class="simple-text logo-normal">
+                UniWebCity
+                  </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+
+          <li class="nav-item {% if 'index' in segment %} active {% endif %}">
+            <a class="nav-link" href="/">
+              <i class="material-icons">dashboard</i>
+              <p>Inicio</p>
+            </a>
+          </li>
+{% comment %}           <li class="nav-item {% if 'page-user' in segment %} active {% endif %}">
+            <a class="nav-link" href="home/page-user.html">
+              <i class="material-icons">person</i>
+              <p>User Profile</p>
+            </a>
+          </li> {% endcomment %}
+          <li class="nav-item {% if 'departments' in segment %} active {% endif %}">
+            <a class="nav-link" href="/departments">
+              <i class="material-icons">content_paste</i>
+              <p>Lista de departamentos </p>
+            </a>
+          </li>
+          <li class="nav-item {% if 'professors' in segment %} active {% endif %}">
+            <a class="nav-link" href="/professors">
+              <i class="material-icons">content_paste</i>
+              <p>Lista de profesores</p>
+            </a>
+          </li>
+{% comment %}           <li class="nav-item {% if 'ui-tables' in segment %} active {% endif %}">
+            <a class="nav-link" href="home/ui-tables.html">
+              <i class="material-icons">content_paste</i>
+              <p>Lista de materias</p>
+            </a>
+          </li> {% endcomment %}
+
+        </ul>
+      </div>
+
+    </div>
