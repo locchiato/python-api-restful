@@ -1,6 +1,7 @@
 
 
-#### API creada con Django Rest Framework y MySQL.
+### API creada con Django Rest Framework y MySQL.
+
 
 ## Requisitos para correr el proyecto
 
@@ -15,10 +16,12 @@ Usar Git bash para clonar el proyecto:
 ```bash
 git clone https://github.com/locchiato/python-api-restful
 ```
+
 Entrar al proyecto:
 ```bash
 cd python-api-restful
 ```
+
 Crear entorno virtual:
 ```bash
 py -m venv venv
@@ -38,6 +41,15 @@ pip install -r requirements.txt
 Crear super usuario
 ```bash
 python manage.py createsuperuser --username=tu_usuario
+```
+
+Crear archivo .env en la raiz del proyecto, que contenga las siguientes constantes:
+```bash
+DB_NAME=uniwebcity
+USER=usuario_mysql
+PASSWORD=contraseña_mysql
+HOST=localhost
+SECRET_KEY=secret_key
 ```
 
 
